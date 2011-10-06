@@ -292,3 +292,9 @@ span.star-rating.rating-20, span.star-rating.rating-20 em { background-position:
 span.star-rating.rating-10, span.star-rating.rating-10 em { background-position: 119px 0; }
 
 /* @end Stars*/
+
+a.navLink:hover {
+    color: #FFF;
+    background-color: #0832AA;
+    text-decoration: none;
+}
