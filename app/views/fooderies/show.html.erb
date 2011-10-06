@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @foodery.name %>
+</p>
+
+<p>
+  <b>Rating:</b>
+  <%= @foodery.rating %>
+</p>
+
+
+<%= link_to 'Edit', edit_foodery_path(@foodery) %> |
+<%= link_to 'Back', fooderies_path %>

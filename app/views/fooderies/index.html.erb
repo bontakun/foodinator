@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Foo-dinator</title>
+    <%= stylesheet_link_tag "global" %>
+</head>
+
+<body>
+
+<div id="pageContent">
+    <header>
+    <%= image_tag "hdr-main.gif", :alt => "Foo-dinator", :border => "0", :width => "754", :height => "67" %>
+        <nav>
+            a
+                <li>
+                    <a href="/fooderies" class="navLink">
+                        <%= image_tag "tutorials-32.jpg", :alt => "Admin", :border => "0", :width => "32", :height => "32" %>
+                        <br>
+                        Admin
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div id="mainBody">
+        <table border="1">
+            <thead>
+                <th class="name">Name</th>
+                <th class="location">Location</th>
+                <th class="rating">Rating</th>
+                <th class="edit"></th>
+            </thead>
+            <tbody>
+                <% @fooderies.each do |foodery| %>
+                <tr>
+                    <td><%= foodery.name %></td>
+                    <td>THE OMEGA SECTOR</td>
+                    <td><%= foodery.rating %></td>
+                    <td>
+                        <%= link_to 'Edit', edit_foodery_path(foodery) %>
+                        <br />
+                        <%= link_to 'Destroy', foodery, :confirm => 'Are you sure?', :method => :delete %>
+                    </td>
+                </tr>
+                <% end %>
+            </tbody>
+        </table>
+        
+        <br />
+        <%= link_to 'New Foodery', new_foodery_path %>
+    </div><!-- /.mainBody -->
+</div><!-- /#pageContent -->
+</body>
+</html>

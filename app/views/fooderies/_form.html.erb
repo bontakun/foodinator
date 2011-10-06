@@ -1,0 +1,24 @@
+<%= form_for(@foodery) do |f| %>
+  <% if @foodery.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@foodery.errors.count, "error") %> prohibited this foodery from being saved:</h2>
+
+      <ul>
+      <% @foodery.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <fieldset>
+    <label>Restaurant Name <%= f.text_field :name %></label>
+    <label>Location <input></label>
+    <label>Rating <%= f.text_field :rating %></label>
+  </fieldset>
+  <div class="btnContainer">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+        

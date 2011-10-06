@@ -1,0 +1,2 @@
+module FooderiesHelper
+end
